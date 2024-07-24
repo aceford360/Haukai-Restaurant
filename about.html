@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Haukai Restaurant - where the best Maori kai is served! ">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Haukai Restaurant</title>
+</head>
+<body>
+    <!--navigation bar -->
+    <nav>
+        <div class="container">
+            <h1>Haukai Restaurant</h1>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="staff/staff.html">Login</a></li>
+            </ul>
+            <!-- Add a class to the menu toggle button for styling -->
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <!-- Move the navigation links inside the dropdown menu container -->
+        <div id="dropdown-menu" class="dropdown-menu">
+            <ul id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="staff/staff.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--hero section -->
+<header id="home" class="hero1">
+    <div class="container1">
+        <div class="text-container1">
+            <h2>About Us</h2>
+        </div>
+    </div>
+</header>
+
+<!--about us -->
+<section id="about1" class="about1">
+    <div class="container">
+        <div class="about-content1">
+            <div class="about-text1">
+                <h2>About Us</h2>
+                <p>We are a restaurant located in the Bay Of Islands, New Zealand.
+                    <br>We try our best when it comes to serving the best Maori and Pakeha food to our customers.</p>
+            </div>
+            <div class="about-image1">
+                <!--image by sam moghadam on unsplash -->
+                <img src="images/sam-moghadam-khamseh-i3A-se17VAg-unsplash.jpg" alt="Restaurant food on a plate" width="250" height="250">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--what we do section -->
+<section id="about2" class="about2">
+    <div class="container">
+        <div class="about-content2">
+            <div class="about-text2">
+                <h2>What we do</h2>
+                <p>Our goal here at the Haukai Restaurant is to provide our customers traditional Maori Kai<br>and allow them to learn more about the Kiwi culuture.</p>
+                <br><br>
+                
+            </div>
+            <div class="about-image2">
+                <!--image by cala on unsplash -->
+                <img src="images/cala-DQWrXgH-tuw-unsplash.jpg" alt="Restaurant food on a plate" width="250" height="250">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Haukai Restaurant</p>
+        </div>
+    </footer> 
+ <!-- hamburger button script -->
+ <script>
+    //get a reference to the menu toggle button
+const menuToggle = document.querySelector('.menu-toggle');
+//get a reference to the dropdown menu
+const dropdownMenu = document.getElementById('dropdown-menu');
+menuToggle.addEventListener('click', function () {
+    //toggle the "active" class on the dropdown menu
+    dropdownMenu.classList.toggle('active');
+    //toggle the max-height property to show/hide the menu
+    if (dropdownMenu.classList.contains('active')) {
+        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+    } else {
+        dropdownMenu.style.maxHeight = '0px';
+    }
+});
+</script>
+
+</body>
+</html>
